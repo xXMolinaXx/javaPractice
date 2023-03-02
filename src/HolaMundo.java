@@ -1,4 +1,6 @@
 public class HolaMundo {
+    public String nombre;
+    public String apellido;
     /*
     sout shortcut print output
     main genera el metodo de abajo
