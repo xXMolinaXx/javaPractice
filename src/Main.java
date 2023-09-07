@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // atajos
+        // sout: system.out.println(")
+        System.out.println("escribe en el teclado");
         Scanner sc = new Scanner(System.in);
         String name = sc.nextLine();
         System.out.println(name);
