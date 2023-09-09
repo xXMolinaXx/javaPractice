@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import classes.Doc;
 
 public class Main {
     /**
@@ -13,6 +14,7 @@ public class Main {
     }
     public static void main(String[] args) {
         // declarando variables
+        int opcion = 0;
         int speed = 0;
         System.out.println(speed);
         int salary = 1000;
@@ -55,7 +57,28 @@ public class Main {
         int value = 12;
         System.out.println(value);
         System.out.println(newHolaMundo);
+        System.out.println(newHolaMundo.showName());
         System.out.println(Math.sqrt(4));
         funcsi(5);
+        Doctor doctor= new Doctor("kenny MOlina","0801199724466","medico general",111,199);
+        Doc doc= new Doc("kenny MOlina","0801199724466","medico general",111,199);
+        Conexion dbCon = new Conexion();
+        dbCon.getConnection();
+
+        do{
+            System.out.println("***** Inicio de proyecto con bases de datos *****");
+            System.out.println("1) crear doctor");
+            System.out.println("2) leer doctores");
+            System.out.println("5) salir");
+            opcion = sc.nextInt();
+            switch (opcion){
+                case 1:
+                    DoctorService.crearDoctor();
+                    break;
+                case 2:
+                    System.out.println("aun no esta hecho");
+            }
+
+        }while (opcion != 5);
     }
 }
