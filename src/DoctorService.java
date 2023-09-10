@@ -12,5 +12,13 @@ public class DoctorService {
         Doctor2 doctor2 = new Doctor2(nombre,codigo,identidad);
         DoctorDAO.crearDoctor(doctor2);
     }
-    public static void leerDoctor(){}
+    public static void leerDoctor(){
+        DoctorDAO.leerDocotor();
+    }
+    public static void eliminarDoctor(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("escribe el id del doctor");
+        int id = sc.nextInt();
+        DoctorDAO.borrarDoctor(id);
+    }
 }

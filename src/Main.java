@@ -69,14 +69,21 @@ public class Main {
             System.out.println("***** Inicio de proyecto con bases de datos *****");
             System.out.println("1) crear doctor");
             System.out.println("2) leer doctores");
+            System.out.println("3) eliminar doctor");
             System.out.println("5) salir");
             opcion = sc.nextInt();
             switch (opcion){
+                case 3:
+                    DoctorService.eliminarDoctor();
                 case 1:
                     DoctorService.crearDoctor();
                     break;
                 case 2:
-                    System.out.println("aun no esta hecho");
+                    DoctorService.leerDoctor();
+                    break;
+                default:
+                    System.out.println("selecione una opcion porfavor");
+                    break;
             }
 
         }while (opcion != 5);
